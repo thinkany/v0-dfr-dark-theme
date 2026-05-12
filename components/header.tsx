@@ -19,18 +19,29 @@ const featuresSubLinks = [
   { href: "#film-editorials", label: "Film Editorials" },
 ]
 
+const moreSubLinks = [
+  { href: "#about-dfr", label: "About DFR" },
+  { href: "#contact", label: "Contact" },
+  { href: "#support-dfr", label: "Support DFR" },
+  { href: "#critic-of-the-year", label: "IFCA's 2024 Critic of the Year" },
+  { href: "#bibliography", label: "Bibliography" },
+  { href: "https://www.teepublic.com/stores/deep-focus-review", label: "TeePublic Store" },
+  { href: "#friends-and-critics", label: "Friends and Fellow Critics" },
+]
+
 const navLinks = [
   { href: "#reviews", label: "Reviews", submenu: "reviews" },
   { href: "#essays", label: "The Definitives" },
   { href: "#features", label: "Features", submenu: "features" },
   { href: "https://www.patreon.com/deepfocusreview", label: "Patreon", external: true },
-  { href: "#about", label: "About" },
+  { href: "#more", label: "More", submenu: "more" },
 ]
 
 export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [reviewsOpen, setReviewsOpen] = useState(false)
   const [featuresOpen, setFeaturesOpen] = useState(false)
+  const [moreOpen, setMoreOpen] = useState(false)
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
@@ -50,9 +61,9 @@ export function Header() {
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-8">
             {navLinks.map((link) => {
-              const isOpen = link.submenu === "reviews" ? reviewsOpen : link.submenu === "features" ? featuresOpen : false
-              const setOpen = link.submenu === "reviews" ? setReviewsOpen : link.submenu === "features" ? setFeaturesOpen : () => {}
-              const subLinks = link.submenu === "reviews" ? reviewsSubLinks : link.submenu === "features" ? featuresSubLinks : []
+              const isOpen = link.submenu === "reviews" ? reviewsOpen : link.submenu === "features" ? featuresOpen : link.submenu === "more" ? moreOpen : false
+              const setOpen = link.submenu === "reviews" ? setReviewsOpen : link.submenu === "features" ? setFeaturesOpen : link.submenu === "more" ? setMoreOpen : () => {}
+              const subLinks = link.submenu === "reviews" ? reviewsSubLinks : link.submenu === "features" ? featuresSubLinks : link.submenu === "more" ? moreSubLinks : []
               
               return link.submenu ? (
                 <div 
@@ -125,13 +136,15 @@ export function Header() {
         <div className="md:hidden bg-background border-t border-border">
           <nav className="px-4 py-6 space-y-2">
             {navLinks.map((link) => {
-              const isOpen = link.submenu === "reviews" ? reviewsOpen : link.submenu === "features" ? featuresOpen : false
+              const isOpen = link.submenu === "reviews" ? reviewsOpen : link.submenu === "features" ? featuresOpen : link.submenu === "more" ? moreOpen : false
               const toggleOpen = link.submenu === "reviews" 
                 ? () => setReviewsOpen(!reviewsOpen) 
                 : link.submenu === "features" 
                   ? () => setFeaturesOpen(!featuresOpen) 
-                  : () => {}
-              const subLinks = link.submenu === "reviews" ? reviewsSubLinks : link.submenu === "features" ? featuresSubLinks : []
+                  : link.submenu === "more"
+                    ? () => setMoreOpen(!moreOpen)
+                    : () => {}
+              const subLinks = link.submenu === "reviews" ? reviewsSubLinks : link.submenu === "features" ? featuresSubLinks : link.submenu === "more" ? moreSubLinks : []
               
               return link.submenu ? (
                 <div key={link.href}>

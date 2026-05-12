@@ -14,10 +14,14 @@ const footerLinks = {
     { href: "#", label: "RSS Feed" },
     { href: "#", label: "Podcast" },
   ],
-  support: [
-    { href: "#", label: "Subscribe" },
-    { href: "#", label: "About" },
-    { href: "#", label: "Contact" },
+  more: [
+    { href: "#about-dfr", label: "About DFR" },
+    { href: "#contact", label: "Contact" },
+    { href: "#support-dfr", label: "Support DFR" },
+    { href: "#critic-of-the-year", label: "IFCA's 2024 Critic of the Year" },
+    { href: "#bibliography", label: "Bibliography" },
+    { href: "https://www.teepublic.com/stores/deep-focus-review", label: "TeePublic Store" },
+    { href: "#friends-and-critics", label: "Friends and Fellow Critics" },
   ],
 }
 
@@ -66,11 +70,11 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* Support */}
+          {/* More */}
           <div>
-            <h4 className="text-xs text-muted-foreground uppercase tracking-wider mb-4">Support</h4>
+            <h4 className="text-xs text-muted-foreground uppercase tracking-wider mb-4">More</h4>
             <ul className="space-y-3">
-              {footerLinks.support.map((link) => (
+              {footerLinks.more.map((link) => (
                 <li key={link.label}>
                   <Link href={link.href} className="text-sm text-foreground hover:text-primary transition-colors">
                     {link.label}
