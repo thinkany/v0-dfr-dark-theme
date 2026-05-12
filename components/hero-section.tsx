@@ -8,8 +8,8 @@ export function HeroSection() {
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?q=80&w=2070&auto=format&fit=crop"
-          alt="Cinema atmosphere"
+          src="/images/alpha-hero.jpg"
+          alt="Alpha movie scene"
           fill
           className="object-cover"
           priority
