@@ -5,6 +5,7 @@ const footerLinks = {
     { href: "#", label: "Reviews" },
     { href: "#", label: "The Definitives" },
     { href: "#", label: "Features" },
+    { href: "https://www.patreon.com/deepfocusreview", label: "Patreon" },
     { href: "#", label: "Archive" },
   ],
   connect: [

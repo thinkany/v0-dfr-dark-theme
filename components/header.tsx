@@ -23,6 +23,7 @@ const navLinks = [
   { href: "#reviews", label: "Reviews", submenu: "reviews" },
   { href: "#essays", label: "The Definitives" },
   { href: "#features", label: "Features", submenu: "features" },
+  { href: "https://www.patreon.com/deepfocusreview", label: "Patreon", external: true },
   { href: "#about", label: "About" },
 ]
 
