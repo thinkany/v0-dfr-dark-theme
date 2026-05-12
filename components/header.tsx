@@ -2,10 +2,17 @@
 
 import { useState } from "react"
 import Link from "next/link"
-import { Menu, X, Search } from "lucide-react"
+import { Menu, X, Search, ChevronDown } from "lucide-react"
+
+const reviewsSubLinks = [
+  { href: "#reviews-az", label: "Reviews A-Z" },
+  { href: "#readers-choice", label: "Reader's Choice" },
+  { href: "#short-takes", label: "Short Takes" },
+  { href: "#patreon-exclusive", label: "Patreon Exclusive" },
+]
 
 const navLinks = [
-  { href: "#reviews", label: "Reviews" },
+  { href: "#reviews", label: "Reviews", hasSubmenu: true },
   { href: "#essays", label: "Definitives" },
   { href: "#features", label: "Patreon" },
   { href: "#about", label: "About" },
@@ -13,6 +20,7 @@ const navLinks = [
 
 export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const [reviewsOpen, setReviewsOpen] = useState(false)
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
@@ -32,13 +40,44 @@ export function Header() {
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-8">
             {navLinks.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                className="text-sm text-muted-foreground hover:text-foreground transition-colors uppercase tracking-wider"
-              >
-                {link.label}
-              </Link>
+              link.hasSubmenu ? (
+                <div 
+                  key={link.href} 
+                  className="relative"
+                  onMouseEnter={() => setReviewsOpen(true)}
+                  onMouseLeave={() => setReviewsOpen(false)}
+                >
+                  <button
+                    className="flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground transition-colors uppercase tracking-wider"
+                  >
+                    {link.label}
+                    <ChevronDown className={`w-4 h-4 transition-transform ${reviewsOpen ? 'rotate-180' : ''}`} />
+                  </button>
+                  {reviewsOpen && (
+                    <div className="absolute top-full left-0 pt-2">
+                      <div className="bg-card border border-border rounded-sm shadow-lg min-w-48 py-2">
+                        {reviewsSubLinks.map((subLink) => (
+                          <Link
+                            key={subLink.href}
+                            href={subLink.href}
+                            className="block px-4 py-2 text-sm text-muted-foreground hover:text-foreground hover:bg-secondary transition-colors"
+                          >
+                            {subLink.label}
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
+                  )}
+                </div>
+              ) : (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className="text-sm text-muted-foreground hover:text-foreground transition-colors uppercase tracking-wider"
+                >
+                  {link.label}
+                </Link>
+              )
             ))}
           </nav>
 
@@ -70,20 +109,46 @@ export function Header() {
       {/* Mobile Menu */}
       {mobileMenuOpen && (
         <div className="md:hidden bg-background border-t border-border">
-          <nav className="px-4 py-6 space-y-4">
+          <nav className="px-4 py-6 space-y-2">
             {navLinks.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                className="block text-lg text-foreground hover:text-primary transition-colors"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                {link.label}
-              </Link>
+              link.hasSubmenu ? (
+                <div key={link.href}>
+                  <button
+                    className="flex items-center justify-between w-full text-lg text-foreground hover:text-primary transition-colors py-2"
+                    onClick={() => setReviewsOpen(!reviewsOpen)}
+                  >
+                    {link.label}
+                    <ChevronDown className={`w-5 h-5 transition-transform ${reviewsOpen ? 'rotate-180' : ''}`} />
+                  </button>
+                  {reviewsOpen && (
+                    <div className="pl-4 space-y-1 border-l border-border ml-2">
+                      {reviewsSubLinks.map((subLink) => (
+                        <Link
+                          key={subLink.href}
+                          href={subLink.href}
+                          className="block py-2 text-muted-foreground hover:text-foreground transition-colors"
+                          onClick={() => setMobileMenuOpen(false)}
+                        >
+                          {subLink.label}
+                        </Link>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              ) : (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className="block text-lg text-foreground hover:text-primary transition-colors py-2"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  {link.label}
+                </Link>
+              )
             ))}
             <Link
               href="#subscribe"
-              className="inline-flex px-4 py-2 bg-primary text-primary-foreground text-sm font-medium rounded-sm"
+              className="inline-flex mt-4 px-4 py-2 bg-primary text-primary-foreground text-sm font-medium rounded-sm"
               onClick={() => setMobileMenuOpen(false)}
             >
               Subscribe
