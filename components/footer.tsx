@@ -3,7 +3,7 @@ import Link from "next/link"
 const footerLinks = {
   browse: [
     { href: "#", label: "Reviews" },
-    { href: "#", label: "Definitives" },
+    { href: "#", label: "The Definitives" },
     { href: "#", label: "Features" },
     { href: "#", label: "Archive" },
   ],

@@ -13,7 +13,7 @@ const reviewsSubLinks = [
 
 const navLinks = [
   { href: "#reviews", label: "Reviews", hasSubmenu: true },
-  { href: "#essays", label: "Definitives" },
+  { href: "#essays", label: "The Definitives" },
   { href: "#features", label: "Patreon" },
   { href: "#about", label: "About" },
 ]
