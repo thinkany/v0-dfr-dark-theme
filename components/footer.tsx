@@ -2,8 +2,8 @@ import Link from "next/link"
 
 const footerLinks = {
   browse: [
-    { href: "#", label: "Latest Reviews" },
-    { href: "#", label: "Essays" },
+    { href: "#", label: "Reviews" },
+    { href: "#", label: "Definitives" },
     { href: "#", label: "Features" },
     { href: "#", label: "Archive" },
   ],
@@ -15,7 +15,6 @@ const footerLinks = {
   ],
   support: [
     { href: "#", label: "Subscribe" },
-    { href: "#", label: "Donate" },
     { href: "#", label: "About" },
     { href: "#", label: "Contact" },
   ],
