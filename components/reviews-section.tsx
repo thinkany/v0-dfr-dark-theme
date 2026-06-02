@@ -7,40 +7,40 @@ import { useRef, useState, useEffect } from "react"
 
 const reviews = [
   {
-    title: "Mike & Nick & Nick & Alice",
-    excerpt: "A playful blend of action-comedy and time-travel movie that delivers unexpected thrills.",
+    title: "Backrooms",
+    excerpt: "A terrifying descent into liminal spaces that proves less is more in modern horror filmmaking.",
     author: "Brian Eggert",
-    image: "https://images.unsplash.com/photo-1536440136628-849c177e76a1?q=80&w=1925&auto=format&fit=crop",
+    image: "https://www.deepfocusreview.com/wp-content/uploads/2026/05/Backrooms-movie-still-2.png",
   },
   {
-    title: "A Magnificent Life",
-    excerpt: "French animator Sylvain Chomet's latest is gorgeously animated, but its English-dubbed presentation was a mistake.",
+    title: "Chum",
+    excerpt: "A visceral thriller that keeps audiences on the edge of their seats from start to finish.",
     author: "Brian Eggert",
-    image: "https://images.unsplash.com/photo-1485846234645-a62644f84728?q=80&w=2059&auto=format&fit=crop",
+    image: "https://www.deepfocusreview.com/wp-content/uploads/2026/05/Chum-movie-still-2.png",
   },
   {
-    title: "Project Hail Mary",
-    excerpt: "Ryan Gosling stars in a big-screen spectacle that dumbs down Andy Weir's excellent book.",
+    title: "Pressure",
+    excerpt: "A taut, claustrophobic thriller that explores the depths of human endurance and survival.",
     author: "Brian Eggert",
-    image: "https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?q=80&w=2072&auto=format&fit=crop",
+    image: "https://www.deepfocusreview.com/wp-content/uploads/2026/05/Pressure-movie-still-2.png",
   },
   {
-    title: "Miroirs No. 3",
-    excerpt: "Christian Petzold's latest is a mysterious, moving drama about tragedy and emotional suspended animation.",
+    title: "Power Ballad",
+    excerpt: "An electrifying musical journey through the glory days of arena rock and personal redemption.",
     author: "Brian Eggert",
-    image: "https://images.unsplash.com/photo-1478720568477-152d9b164e26?q=80&w=2070&auto=format&fit=crop",
+    image: "https://www.deepfocusreview.com/wp-content/uploads/2026/05/Power-Ballad-Movie-Still-2.png",
   },
   {
-    title: "The Brutalist",
-    excerpt: "Brady Corbet's ambitious epic about an architect's journey through post-war America is a towering achievement.",
+    title: "Passenger",
+    excerpt: "A gripping character study that examines isolation and connection in unexpected ways.",
     author: "Brian Eggert",
-    image: "https://images.unsplash.com/photo-1518005020951-eccb494ad742?q=80&w=2065&auto=format&fit=crop",
+    image: "https://www.deepfocusreview.com/wp-content/uploads/2026/05/Passenger-movie-still-1.png",
   },
   {
-    title: "Nosferatu",
-    excerpt: "Robert Eggers delivers a visually stunning and deeply atmospheric reimagining of the classic vampire tale.",
+    title: "Corporate Retreat",
+    excerpt: "A darkly comic take on workplace culture that cuts deeper than expected.",
     author: "Brian Eggert",
-    image: "https://images.unsplash.com/photo-1509248961725-9d3c0c797e6e?q=80&w=2022&auto=format&fit=crop",
+    image: "https://www.deepfocusreview.com/wp-content/uploads/2026/05/Corporate-Retreat-movie-still-1.png",
   },
 ]
 
@@ -98,7 +98,7 @@ export function ReviewsSection() {
   }
 
   return (
-    <section id="reviews" className="py-16 md:py-24 bg-card">
+    <section id="reviews" className="py-12 md:py-[72px] bg-card">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="flex items-end justify-between mb-12">

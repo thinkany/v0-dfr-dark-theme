@@ -15,7 +15,7 @@ export function NewsletterSection() {
   }
 
   return (
-    <section id="subscribe" className="py-16 md:py-24 bg-card border-y border-border">
+    <section id="subscribe" className="py-12 md:py-[72px] bg-card border-y border-border">
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <span className="text-xs text-muted-foreground uppercase tracking-[0.2em] mb-4 block">Stay Connected</span>
         <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl text-foreground mb-6 text-balance">
