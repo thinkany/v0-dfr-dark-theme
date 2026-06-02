@@ -4,7 +4,7 @@ import { ArrowRight } from "lucide-react"
 
 export function EssaySection() {
   return (
-    <section id="essays" className="py-16 md:py-24">
+    <section id="essays" className="py-12 md:py-[72px]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="mb-12">

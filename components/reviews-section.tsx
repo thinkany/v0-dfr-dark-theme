@@ -98,7 +98,7 @@ export function ReviewsSection() {
   }
 
   return (
-    <section id="reviews" className="py-16 md:py-24 bg-card">
+    <section id="reviews" className="py-12 md:py-[72px] bg-card">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="flex items-end justify-between mb-12">
