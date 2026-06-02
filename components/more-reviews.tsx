@@ -7,7 +7,7 @@ const moreReviews = [
     image: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?q=80&w=2070&auto=format&fit=crop",
   },
   {
-    title: "Ready or Not 2",
+    title: "Ready or Not 2: Hide and Seek",
     image: "https://images.unsplash.com/photo-1509347528160-9a9e33742cdb?q=80&w=2070&auto=format&fit=crop",
   },
   {
@@ -15,7 +15,7 @@ const moreReviews = [
     image: "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?q=80&w=2126&auto=format&fit=crop",
   },
   {
-    title: "undertone",
+    title: "A Quiet Place: The Beginning of Silence",
     image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1974&auto=format&fit=crop",
   },
   {
@@ -23,7 +23,7 @@ const moreReviews = [
     image: "https://images.unsplash.com/photo-1545239351-ef35f43d514b?q=80&w=1974&auto=format&fit=crop",
   },
   {
-    title: "The Bride!",
+    title: "The Bride Who Wouldn't Say Goodbye",
     image: "https://images.unsplash.com/photo-1460723237483-7a6dc9d0b212?q=80&w=2070&auto=format&fit=crop",
   },
 ]
