@@ -3,28 +3,28 @@ import Link from "next/link"
 
 const moreReviews = [
   {
-    title: "Tow",
-    image: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?q=80&w=2070&auto=format&fit=crop",
+    title: "Backrooms",
+    image: "https://www.deepfocusreview.com/wp-content/uploads/2026/05/Backrooms-movie-still-2.png",
   },
   {
-    title: "Ready or Not 2: Hide and Seek",
-    image: "https://images.unsplash.com/photo-1509347528160-9a9e33742cdb?q=80&w=2070&auto=format&fit=crop",
+    title: "Witness for the Prosecution",
+    image: "https://www.deepfocusreview.com/wp-content/uploads/2026/05/Witness-for-the-Prosecution-movie-poster.png",
   },
   {
-    title: "The Gates",
-    image: "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?q=80&w=2126&auto=format&fit=crop",
+    title: "Chum",
+    image: "https://www.deepfocusreview.com/wp-content/uploads/2026/05/Chum-movie-still-2.png",
   },
   {
-    title: "A Quiet Place: The Beginning of Silence",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1974&auto=format&fit=crop",
+    title: "The Philadelphia Story",
+    image: "https://www.deepfocusreview.com/wp-content/uploads/2026/05/The-Philadelphia-Story-movie-poster.png",
   },
   {
-    title: "Bushido",
-    image: "https://images.unsplash.com/photo-1545239351-ef35f43d514b?q=80&w=1974&auto=format&fit=crop",
+    title: "Pressure",
+    image: "https://www.deepfocusreview.com/wp-content/uploads/2026/05/Pressure-movie-still-2.png",
   },
   {
-    title: "The Bride Who Wouldn't Say Goodbye",
-    image: "https://images.unsplash.com/photo-1460723237483-7a6dc9d0b212?q=80&w=2070&auto=format&fit=crop",
+    title: "I Love Boosters",
+    image: "https://www.deepfocusreview.com/wp-content/uploads/2026/05/I-Love-Boosters-movie-still.png",
   },
 ]
 
