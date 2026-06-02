@@ -16,8 +16,8 @@ export function EssaySection() {
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           <Link href="#" className="relative aspect-[16/10] overflow-hidden group">
             <Image
-              src="https://images.unsplash.com/photo-1534447677768-be436bb09401?q=80&w=2071&auto=format&fit=crop"
-              alt="Sunshine (2007)"
+              src="https://www.deepfocusreview.com/wp-content/uploads/2026/05/Renoir-movie-still.png"
+              alt="Renoir"
               fill
               className="object-cover transition-transform duration-700 group-hover:scale-105"
             />
@@ -30,12 +30,12 @@ export function EssaySection() {
           </Link>
 
           <div className="lg:py-8">
-            <span className="text-sm text-muted-foreground mb-4 block">2007 • Danny Boyle</span>
+            <span className="text-sm text-muted-foreground mb-4 block">2012 • Gilles Bourdos</span>
             <h3 className="font-serif text-3xl md:text-4xl lg:text-5xl text-foreground mb-6 leading-tight text-balance">
-              Sunshine
+              Renoir
             </h3>
             <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-              Director Danny Boyle and writer Alex Garland&apos;s trip to save the Sun is about the danger of putting mysticism over science. A visually stunning meditation on humanity&apos;s relationship with the cosmos and our capacity for sacrifice.
+              Gilles Bourdos&apos; intimate portrait of the legendary painter Pierre-Auguste Renoir in his final years explores art, beauty, and the passing of creative genius from one generation to the next.
             </p>
             <div className="flex items-center gap-4 mb-8">
               <div className="w-10 h-10 rounded-full bg-secondary flex items-center justify-center">

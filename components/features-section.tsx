@@ -8,21 +8,21 @@ const features = [
     subtitle: "April 8-19",
     description: "Festival Coverage: MSPIFF returns with a lineup of over 200 films from around the world.",
     icon: Calendar,
-    image: "https://images.unsplash.com/photo-1594909122845-11baa439b7bf?q=80&w=2070&auto=format&fit=crop",
+    image: "https://www.deepfocusreview.com/wp-content/uploads/2026/05/KARE-11-5-30-26.png",
   },
   {
     title: "The CineFiles",
     subtitle: "Episode 22",
     description: "Reviews of Project Hail Mary, Tow, and Ready or Not 2: Here I Come.",
     icon: Mic,
-    image: "https://images.unsplash.com/photo-1478720568477-152d9b164e26?q=80&w=2070&auto=format&fit=crop",
+    image: "https://www.deepfocusreview.com/wp-content/uploads/2026/05/Saying-Goodbye-to-The-CineFiles.png",
   },
   {
     title: "Support DFR",
     subtitle: "Join Us",
     description: "Support independent film criticism. Access exclusive writing. Connect with our community.",
     icon: Heart,
-    image: "https://images.unsplash.com/photo-1440404653325-ab127d49abc1?q=80&w=2070&auto=format&fit=crop",
+    image: "https://www.deepfocusreview.com/wp-content/uploads/2024/10/about-2024.png",
   },
 ]
 
